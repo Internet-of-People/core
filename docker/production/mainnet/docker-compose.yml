@@ -15,13 +15,13 @@ services:
       POSTGRES_USER: hydra
       POSTGRES_PASSWORD: password
   core:
-    image: internetofpeople/hydra-core:2.5.14
+    image: internetofpeople/hydra-core:2.5.19
     container_name: hydra-core
     restart: always
     command: mainnet ${MODE} ${FORGING_MODE}
     ports:
       # P2P
-      - '4702:4701'
+      - '4701:4701'
       # API
       - '4703:4703'
       # WEBHOOK
