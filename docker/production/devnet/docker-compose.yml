@@ -15,7 +15,7 @@ services:
       POSTGRES_USER: hydra
       POSTGRES_PASSWORD: password
   core:
-    image: internetofpeople/hydra-core:2.5.19
+    image: internetofpeople/hydra-core:2.5.19-rc1
     container_name: hydra-core
     restart: always
     command: devnet ${MODE} ${FORGING_MODE}
