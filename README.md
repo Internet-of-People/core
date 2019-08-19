@@ -11,7 +11,7 @@
 3. [Contributing](#Contributing)
 4. [Documentation](#Documentation)
 
-    - [Developing on Devnet](Developing-on-Devnet)
+    - [Developing on Devnet](#Developing-on-Devnet)
 
 5. [API Documentation](#API-Documentation)
 6. [Credits](#Credits)
@@ -62,14 +62,9 @@ $ git clone git@github.com:Internet-of-People/hydra-core.git
 ```
 
 ```bash
-# Move into the repo and run setup. `setup` hook will install all necessary JavaScript dependencies to get you up and running with hydra ark core.
+# Move into the repo and run setup. `setup` hook will install all necessary Javascript dependencies to get you up and running with Hydra core.
 $ cd hydra-core
 $ yarn setup
-```
-
-```bash
-# From core, navigate to `docker/production`. From within this directory, run the following command. This will install Postgres with the necessary settings to work with hydra ark core.
-$ docker-compose up -d postgres
 ```
 
 #### Steps to Setup Devnet
@@ -82,16 +77,11 @@ Run the following command. Check that you dont already have a volume setup for `
 docker volumes ls
 ```
 
-If you don't have `postgres-hydra` module already, set it up using the following command.
+If you don't have `postgres-hydra` volume already, set it up using the following command.
 
 ```bash
+# From core, navigate to `docker/production`. From within this directory, run the following command. This will start up a Postgres container with the necessary settings to work with Hydra core.
 export NETWORK=devnet && export MODE=normal && export FORGING_MODE=no_forge && docker-compose up -d postgres
-```
-
-##### Setup Packages
-
-```bash
-yarn setup
 ```
 
 ##### Setup Config and Start devnet
@@ -101,14 +91,6 @@ This will reset the config and enable you to start the `devnet` with your new co
 ```bash
 ./packages/core/bin/run config:reset --network=devnet
 ./packages/core/bin/run relay:run --network=devnet
-```
-
-##### Publishing Config
-
-This is used to publish your config changes/
-
-```bash
-./packages/core/bin/run config:publish --network=devnet
 ```
 
 ##### Stop and Restart
