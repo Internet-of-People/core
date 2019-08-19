@@ -68,11 +68,6 @@ $ yarn setup
 ```
 
 ```bash
-# Run the following command and it will generate all necessary docker files.
-$ yarn docker postgres-hydra
-```
-
-```bash
 # From core, navigate to `docker/production`. From within this directory, run the following command. This will install Postgres with the necessary settings to work with hydra ark core.
 $ docker-compose up -d postgres
 ```

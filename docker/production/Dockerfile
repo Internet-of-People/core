@@ -1,20 +1,18 @@
 FROM node:11-alpine
 
-WORKDIR /home/node/core
+COPY ./ /root/core-hydra
 
-ADD docker/production/entrypoint.sh /entrypoint.sh
+RUN apk add --update git python make g++
 
-ARG core_channel=latest
+# PM2
+RUN yarn global add pm2 && \
+    echo 'export PATH=$PATH:/root/.yarn/bin' >> ~/.bashrc && \
+    source ~/.bashrc
 
-RUN apk add --no-cache --virtual .build-deps make gcc g++ python git \
-    && apk add --no-cache bash sudo git openntpd openssl \
-    && echo "servers pool.ntp.org" > /etc/ntpd.conf \
-    && echo "servers time.google.com" >> /etc/ntpd.conf \
-    && npm i pm2 -g --loglevel notice \
-    && su node -c "yarn global add @arkecosystem/core@${core_channel}" \
-    && su node -c "yarn cache clean" \
-    && apk del .build-deps \
-    && echo 'node ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN cd ~/core-hydra && yarn setup
 
-USER node
-ENTRYPOINT ["bash", "-c", "/entrypoint.sh \"$@\"", "--"]
+COPY docker/production/docker-entrypoint.sh /usr/local/bin/
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["testnet","genesis","auto_forge"]
