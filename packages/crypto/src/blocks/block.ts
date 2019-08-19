@@ -73,11 +73,6 @@ export class Block implements IBlock {
     public constructor({ data, transactions, id }: { data: IBlockData; transactions: ITransaction[]; id?: string }) {
         this.data = data;
 
-        // TODO genesis block calculated id is wrong for some reason
-        if (this.data.height === 1) {
-            this.applyGenesisBlockFix(id || data.id);
-        }
-
         // fix on real timestamp, this is overloading transaction
         // timestamp with block timestamp for storage only
         // also add sequence to keep database sequence
@@ -246,10 +241,5 @@ export class Block implements IBlock {
         result.verified = result.errors.length === 0;
 
         return result;
-    }
-
-    private applyGenesisBlockFix(id: string): void {
-        this.data.id = id;
-        this.data.idHex = Block.toBytesHex(id);
     }
 }
