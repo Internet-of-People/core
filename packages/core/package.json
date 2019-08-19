@@ -1,9 +1,12 @@
 {
-    "name": "@arkecosystem/core",
+    "name": "@internet-of-people/hydra-core",
     "version": "2.5.19",
-    "description": "Core of the ARK Blockchain",
+    "description": "Core of the Hydra Blockchain",
     "license": "MIT",
     "contributors": [
+        "Anfauglith (https://github.com/Anfauglith)",
+        "mudlee (https://github.com/mudlee)",
+        "wigy (https://github.com/wigy-opensource-developer)",
         "François-Xavier Thoorens <fx@ark.io>",
         "Kristjan Košič <kristjan@ark.io>",
         "Brian Faust <brian@ark.io>",
