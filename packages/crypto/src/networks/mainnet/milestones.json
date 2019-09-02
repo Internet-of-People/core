@@ -1,4 +1,5 @@
-[{
+[
+    {
         "height": 1,
         "reward": 0,
         "activeDelegates": 53,
@@ -9,7 +10,7 @@
             "maxPayload": 8388608,
             "idFullSha256": true
         },
-        "epoch": "2019-08-01T08:00:00.000Z",
+        "epoch": "2019-09-01T08:00:00.000Z",
         "fees": {
             "staticFees": {
                 "transfer": 10000000,
