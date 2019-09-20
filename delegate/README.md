@@ -19,8 +19,6 @@ This document guides you through the delegate registration process. In the end, 
 
 ## Prerequisites
 
--   Docker, see [here](https://docs.docker.com/install/).
--   Docker Compose, see [here](https://docs.docker.com/compose/install/).
 -   A running server (VPS) at a hoster of your choice. You should choose a dual-core machine with at least 8 GB of RAM.
 
 ## Steps
@@ -40,18 +38,16 @@ Create a profile for the Hydra network.
 
 **Be sure to select the Hydra network you just created**.
 
-### 3. Create Delegate Address
+### 3. Create Two Addresses
 
-You have to create a separate address that will function as your delegate. You can choose to encrypt the passphrase on your device by giving a secure password.
+You have to create an address that will function as your delegate. It is recommended to create at least two addresses, one as the delegate and one address as your "normal" address. The delegate passphrase will be live on an online server, so it is best to keep most of your money on another address
 
-**Still, do not forget to save your _passphrase_ at a safe place!** If your passphrase is lost, you cannot recover access in any way.
+When generating an address, you can choose to encrypt the passphrase on your device by giving a secure password. **Still, do not forget to save your _passphrase_ at a safe place!** If your passphrase is lost, you cannot recover access in any way.
 
 ### 4. Get Hydras
 
 To be able to register your address as a delegate, you need to send a registration transaction that costs 25 HYDs from it.
 You can get HYDs on exchanges, by voting for an already registered delegate that shares rewards or maybe even by asking nicely.
-
-There is a faucet for DHYD (devnet Hydras) at TODO!.
 
 Continue when you have at least 25 HYD stored on the delegate address.
 
@@ -76,49 +72,29 @@ At this point, you have a registered delegate who can now start forging. To do t
 
 #### Prepare a Server
 
-It's good if your forger runs 0-24/7, so you need a server for that.
+It's good if your forger runs 0-24/7, so you need a good server for that. We have a nice little tool called `core-control` shown to us by an ARK delegate, that will help us set up a forger node.
 
-1. First, take the `docker/production/[devnet|mainnet]` folder's content, and put it on a server somewhere.
-2. Enable P2P ports in your server's firewall.
-    - devnet: 4702
-    - mainnet: 4701
-3. Install Docker
-    ```bash
-    # Install Docker
-    $ apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io
-    ```
-4. Install Docker-Compose
-    ```bash
-    # Install Docker Compose
-    $ curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-    ```
+1. First, login to the new server as a non-root user.
+1. install git: `sudo apt update && sudo apt install git`
+1. clone the repository: `git clone https://github.com/Internet-of-People/core-control -b hyd-mainnet-git`
+1. change into the directory: `cd core-control`
+1. install hydra-core: `./ccontrol.sh install core`
+1. enter your delegate passphrase: `./ccontrol.sh secret set word1 word2 ... word12`
+1. start forging: `./ccontrol.sh start all`
 
-#### Start Forger
-
-```bash
-# Run from the hydra-core/docker/production/[testnet|devnet|mainnet] directory
-$ ./startForger.sh
-```
-
-It will ask for your delegate's bip39 passphrase (the one you saved when you created the delegate address) which will be stored inside the container. When the passphrase is provided, it will spin up a relay and a forger node with PostgreSQL, all running in Docker.
 
 #### Test Forger
 
-```bash
-$ tail -f mountpoints/logs_pm2/hydra-core-out.log | grep "Loaded 1 active delegate"
-```
-
-It should show a line similar to:
-
-```bash
-Loaded 1 active delegate: YOUR_DELEGATE_NAME (...)
-```
+You can check the status of the forger with commands
+`./ccontrol.sh status relay/forger/all` and `./ccontrol.sh logs relay/forger/all`
 
 #### Stop Forger
 
 ```bash
-$ docker-compose down
+`./ccontrol.sh stop all`
 ```
+
+More commands are listed [here](https://github.com/Internet-of-People/core-control)
 
 ### 7. Announce Yourself and Receive Votes
 
