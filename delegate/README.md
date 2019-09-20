@@ -29,8 +29,8 @@ Add the Hydra network in your [ARK desktop wallet](https://ark.io/wallet).
 
 For server address use:
 
--   **devnet:** http://dev.hydra.iop.global:4040
--   **mainnet:** http://hydra.iop.global:4040
+-   **devnet:** http://dev.hydra.iop.global:4703
+-   **mainnet:** http://hydra.iop.global:4703
 
 ### 2. Create a Profile
 
