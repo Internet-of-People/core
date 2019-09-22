@@ -48,10 +48,10 @@ When generating an address, you can choose to encrypt the passphrase on your dev
 
 ### 4. Get Hydras
 
-To be able to register your address as a delegate, you need to send a registration transaction that costs 25 HYDs from it.
+To be able to register your address as a delegate, you need to send a registration transaction that costs up to 25 HYDs from it (13 HYD should be enough though).
 You can get HYDs on exchanges, by voting for an already registered delegate that shares rewards or maybe even by asking nicely.
 
-Continue when you have at least 25 HYD stored on the delegate address.
+Continue when you have at least 13 HYD stored on the delegate address.
 
 ### 5. Register Delegate
 
@@ -59,7 +59,7 @@ Now we need to register the delegate name on the network. Click on the button wi
 
 ![Registering Delegate](assets/register_delegate.png)
 
-Enter a username and your passphrase (or encrypted password), and click “Next”.
+Enter a username and your passphrase (or encrypted password), adjust the fee slider to about 13 HYD (you might need to pay more if the chain is under load) and click “Next”.
 
 ![Registering Delegate](assets/register_delegate2.png)
 ![Registering Delegate](assets/register_delegate3.png)
