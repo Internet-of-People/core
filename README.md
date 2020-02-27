@@ -4,18 +4,20 @@
     <img src="banner.jpg" />
 </p>
 
-## Index
+## Table of Contents <!-- omit in toc -->
 
-1. [Maintainers](#Maintainers)
-2. [Introduction](#Introduction)
-3. [Contributing](#Contributing)
-4. [Documentation](#Documentation)
-
-    - [Developing on Devnet](#Developing-on-Devnet)
-
-5. [API Documentation](#API-Documentation)
-6. [Credits](#Credits)
-7. [License](#License)
+-   [Maintainers](#maintainers)
+-   [Introduction](#introduction)
+-   [Changelog](#changelog)
+-   [Contributing](#contributing)
+-   [Documentation](#documentation)
+    -   [Developing on Devnet](#developing-on-devnet)
+        -   [Prerequisites](#prerequisites)
+        -   [Cloning & Setup for hydra-core repo](#cloning--setup-for-hydra-core-repo)
+        -   [Steps to Setup Devnet](#steps-to-setup-devnet)
+-   [API Documentation](#api-documentation)
+-   [Credits](#credits)
+-   [License](#license)
 
 ## Maintainers
 
@@ -27,6 +29,37 @@
 
 This repository contains the code for the Hydra Blockchain. The Hydra Blockchain is an ARK bridgechain and follows upstream changes as closely as possible.
 Changes to naming schemes, documentation and other auxiliary files are thus kept to a minimum. If you want to learn more about the code, check out the original code base at [@ARKEcosystem](https://github.com/ARKEcosystem/core.git).
+
+## Changelog
+
+Below we describe what were the changes we made release by release compared to the original Ark code.
+
+### 2.6.10
+
+-   Morpheus Plugin added as a submodule (hence `plugins.js` config files were updated as well)
+-   Custom Docker scripts and [images](https://hub.docker.com/repository/docker/internetofpeople/hydra-core) are updated
+-   Fix: During `BlockApplied` and `BlockReverted` events the block's data must contain the transactions:
+    -   at: <https://github.com/ArkEcosystem/core/blob/master/packages/core-database/src/database-service.ts#L92>
+    -   and: <https://github.com/ArkEcosystem/core/blob/master/packages/core-database/src/database-service.ts#L448>
+
+#### Important Notes
+
+This is a mandatory upgrade. To be able to use Hydra, you must upgrade your `plugins.js` file in order to be part of the consensus.
+
+##### Core Controller
+
+If you are using [core-controler](https://github.com/Internet-of-People/core-control), we have now there a `develop` and soon a `master` branch where you can read how you can upgrade your code.
+
+##### Docker
+
+If you are using Docker, we provide a `mountpoints.tar.gz` file for each network which you can unpack (and overwrite) as it's described in our Docker documentation.
+
+### 2.5.9
+
+-   Custom Docker scripts added
+-   Chain network (p2p, api, webhook ports), config (database password/user/dbname, peers, delegates) and crypto (milestones, exceptions, genesis block, network) parameters are changed
+-   Added a delegate guide
+-   Fix: Removed genesis block hacking from <https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/blocks/block.ts#L100>
 
 ## Contributing
 
@@ -40,8 +73,8 @@ Small note: If editing the README, please conform to the
 
 ## Documentation
 
--   Development : https://docs.ark.io/guidebook/core/development.html
--   Docker : https://docs.ark.io/guidebook/core/docker.html
+-   Development: <https://docs.ark.io/guidebook/core/development.html>
+-   Docker: <https://docs.ark.io/guidebook/core/docker.html>
 
 ### Developing on Devnet
 
@@ -59,11 +92,16 @@ The following packages are required before you clone this repository.
 ```bash
 # Clone the hydra core repo.
 $ git clone git@github.com:Internet-of-People/hydra-core.git
+$ cd hydra-core
+```
+
+```bash
+# Update the morpheus plugin to its latest version.
+$ git submodule update --init --force --remote
 ```
 
 ```bash
 # Move into the repo and run setup. `setup` hook will install all necessary Javascript dependencies to get you up and running with Hydra core.
-$ cd hydra-core
 $ yarn setup
 ```
 
@@ -81,7 +119,7 @@ If you don't have `postgres-hydra` volume already, set it up using the following
 
 ```bash
 # From core, navigate to `docker/production`. From within this directory, run the following command. This will start up a Postgres container with the necessary settings to work with Hydra core.
-export NETWORK=devnet && export MODE=normal && export FORGING_MODE=no_forge && docker-compose up -d postgres
+NETWORK=devnet MODE=normal FORGING_MODE=no_forge docker-compose up -d postgres
 ```
 
 ##### Setup Config and Start devnet
@@ -99,8 +137,8 @@ Use ctrl+c to stop and `./packages/core/bin/run relay:run --network=devnet` to r
 
 ## API Documentation
 
--   API v1 : https://docs.ark.io/api/public/v1/
--   API v2 : https://docs.ark.io/api/public/v2/
+-   API v1: <https://docs.ark.io/api/public/v1/>
+-   API v2: <https://docs.ark.io/api/public/v2/>
 
 ## Credits
 
@@ -109,4 +147,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 ## License
 
 Ark Core is released under the [MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
-Changes for Hydra are released under the [MIT](LICENSE) © 2019 Decentralized Society Foundation PA
+Changes for Hydra are released under the [MIT](LICENSE) © 2020 Decentralized Society Foundation PA
