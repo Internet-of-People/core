@@ -28,6 +28,10 @@
         },
         "multiPaymentLimit": 256,
         "vendorFieldLength": 255,
+        "aip11": false
+    },
+    {
+        "height": 2,
         "aip11": true
     },
     {

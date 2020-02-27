@@ -11,17 +11,17 @@ services:
     networks:
       - core
     environment:
-      POSTGRES_DB: hydra_mainnet
+      POSTGRES_DB: hydra_testnet
       POSTGRES_USER: hydra
       POSTGRES_PASSWORD: password
   core:
-    image: internetofpeople/hydra-core:latest-mainnet
+    image: internetofpeople/hydra-core:latest-testnet
     container_name: hydra-core
     restart: always
-    command: mainnet ${MODE} ${FORGING_MODE}
+    command: testnet ${MODE} ${FORGING_MODE}
     ports:
       # P2P
-      - '4701:4701'
+      - '4700:4700'
       # API
       - '4703:4703'
       # WEBHOOK
@@ -46,7 +46,7 @@ services:
     depends_on:
       - postgres
   explorer:
-    image: internetofpeople/hydra-explorer:latest-mainnet
+    image: internetofpeople/hydra-explorer:latest-testnet
     container_name: hydra-explorer
     restart: always
     ports:
