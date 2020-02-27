@@ -109,16 +109,18 @@ $ yarn setup
 
 ##### Setup Postgres DB
 
-Run the following command. Check that you dont already have a volume setup for `postgres-hydra`.
+Run the following commands. Check that you dont already have a volume setup for `<network>_postgres` where network can be `testnet`, `devnet`, etc.
 
 ```bash
-docker volumes ls
+docker volume ls
 ```
 
 If you don't have `postgres-hydra` volume already, set it up using the following command.
 
 ```bash
-# From core, navigate to `docker/production`. From within this directory, run the following command. This will start up a Postgres container with the necessary settings to work with Hydra core.
+# From core, navigate to `docker/production/devnet`.
+# From within this directory, run the following command.
+# This will start up a Postgres container with the necessary settings to work with Hydra core.
 NETWORK=devnet MODE=normal FORGING_MODE=no_forge docker-compose up -d postgres
 ```
 
