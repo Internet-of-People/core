@@ -78,17 +78,16 @@ It's good if your forger runs 0-24/7, so you need a good server for that. We hav
 
 1. First, login to the new server as a non-root user.
 1. install git: `sudo apt update && sudo apt install git`
-1. clone the repository: `git clone https://github.com/Internet-of-People/core-control -b hyd-mainnet-git`
+1. clone the repository: `git clone https://github.com/Internet-of-People/core-control -b master`
 1. change into the directory: `cd core-control`
 1. install hydra-core: `./ccontrol.sh install core`
 1. enter your delegate passphrase: `./ccontrol.sh secret set word1 word2 ... word12`
 1. start forging: `./ccontrol.sh start all`
 
-
 #### Test Forger
 
 You can check the status of the forger with commands
-`./ccontrol.sh status relay/forger/all` and `./ccontrol.sh logs relay/forger/all`
+`./ccontrol.sh status all` and `./ccontrol.sh logs relay/all`
 
 #### Stop Forger
 
