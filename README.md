@@ -1,38 +1,42 @@
-# ARK Core
+# IoP Hydra Core
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ARKEcosystem/core/master/banner.png" />
+    <img src="banner.jpg" />
 </p>
 
-[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/core)](https://circleci.com/gh/ARKEcosystem/core)
-[![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/core)](https://codecov.io/gh/arkecosystem/core)
-[![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
+## Index
 
-> Lead Maintainer: [Erwann Gentric](https://github.com/air1one)
+1. [Maintainers](#Maintainers)
+2. [Introduction](#Introduction)
+3. [Contributing](#Contributing)
+4. [Documentation](#Documentation)
+5. [Credits](#Credits)
+6. [License](#License)
+
+## Maintainers
+
+-   [mudlee](https://github.com/mudlee)
+-   [wigy](https://github.com/wigy-opensource-developer)
+-   [bartmoss](https://github.com/izolyomi)
 
 ## Introduction
 
-> This repository contains all plugins that make up the ARK Core.
+This repository contains the code for the IoP Hydra Blockchain. The IoP Hydra Blockchain is an ARK bridgechain and follows upstream changes as closely as possible.
+Changes to naming schemes, documentation and other auxiliary files are thus kept to a minimum. If you want to learn more about the code, check out the original code base at [@ARKEcosystem](https://github.com/ARKEcosystem/core.git).
 
-Check our [dedicated documentation site](https://learn.ark.dev) for information about all available plugins and [How to write a Core Plugin
-](https://learn.ark.dev/application-development/how-to-write-core-dapps) if you want to get started with developing your own plugins.
+## Contributing
+
+PRs that are inline with our goals to the core IOP user experience are
+more than welcome. To avoid losing precious time you spend on coding, you could
+open an issue first and discuss what you are up to before forking and sending us
+a PR.
+
+Small note: If editing the README, please conform to the
+[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## Documentation
 
--   Development : https://learn.ark.dev/core-getting-started/setting-up-your-development-environment
--   Docker : https://guides.ark.dev/devops-guides/how-to-setup-a-node-with-docker
-
-## API Documentation
-
--   API v2 : https://api.ark.dev
-
-## GitHub Development Bounty
-
--   Get involved with the development and start earning ARK : https://bounty.ark.io
-
-## Security
-
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+Please visit our [Developer Portal](https://iop-stack.iop.rocks/dids-and-claims/specification/#/).
 
 ## Credits
 
@@ -40,4 +44,5 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+Ark Core is released under the [MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+Changes for IoP Hydra are released under the [MIT](LICENSE) © 2019 Decentralized Society Foundation PA

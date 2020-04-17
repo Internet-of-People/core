@@ -1,0 +1,63 @@
+version: '2'
+services:
+  postgres:
+    image: "postgres:alpine"
+    container_name: postgres-hydra
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    networks:
+      - core
+    environment:
+      POSTGRES_DB: hydra_devnet
+      POSTGRES_USER: hydra
+      POSTGRES_PASSWORD: password
+  core:
+    image: internetofpeople/hydra-core:latest-devnet
+    container_name: hydra-core
+    restart: always
+    command: devnet ${MODE} ${FORGING_MODE}
+    ports:
+      # P2P
+      - '4702:4702'
+      # API
+      - '4703:4703'
+      # WEBHOOK
+      - '127.0.0.1:4704:4704'
+      # API WALLET
+      - '4040:4040'
+    cap_add:
+      - SYS_NICE
+      - SYS_RESOURCE
+      - SYS_TIME
+    volumes:
+      - ./mountpoints/config_overwrite:/root/config_overwrite # overwrite core's config
+      - ./mountpoints/logs:/root/.local/state/hydra-core # logs
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - core
+    tty: true
+    links:
+     - postgres
+    depends_on:
+      - postgres
+  explorer:
+    image: internetofpeople/hydra-explorer:latest-devnet
+    container_name: hydra-explorer
+    restart: always
+    ports:
+      - '80:4200'
+    networks:
+      - core
+    links:
+      - core
+    depends_on:
+      - postgres
+      - core
+volumes:
+  postgres:
+  core:
+networks:
+  core:
