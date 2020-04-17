@@ -1,9 +1,12 @@
 {
-    "name": "@arkecosystem/core",
+    "name": "@internet-of-people/hydra-core",
     "version": "2.7.24",
-    "description": "Core of the ARK Blockchain",
+    "description": "Core of the Hydra Blockchain",
     "license": "MIT",
     "contributors": [
+        "Anfauglith (https://github.com/Anfauglith)",
+        "mudlee (https://github.com/mudlee)",
+        "wigy (https://github.com/wigy-opensource-developer)",
         "François-Xavier Thoorens <fx@ark.io>",
         "Kristjan Košič <kristjan@ark.io>",
         "Brian Faust <brian@ark.io>",
@@ -17,31 +20,31 @@
     "main": "dist/index",
     "types": "dist/index",
     "bin": {
-        "ark": "./bin/run"
+        "hydra": "./bin/run"
     },
     "scripts": {
-        "ark": "./bin/run",
+        "hydra": "./bin/run",
         "build": "yarn clean && yarn compile && yarn copy",
         "build:watch": "yarn clean && yarn copy && yarn compile -w",
         "clean": "del dist",
         "compile": "../../node_modules/typescript/bin/tsc",
         "copy": "cd ./src && cpy './config' '../dist/' --parents && cd ..",
-        "debug:forger": "node --inspect-brk yarn ark forger:run",
-        "debug:relay": "node --inspect-brk yarn ark relay:run",
-        "debug:start": "node --inspect-brk yarn ark core:run",
-        "forger:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark forger:run",
-        "forger:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark forger:run",
-        "forger:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark forger:run --env=test",
-        "full:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --networkStart --env=test",
+        "debug:forger": "node --inspect-brk yarn hydra forger:run",
+        "debug:relay": "node --inspect-brk yarn hydra relay:run",
+        "debug:start": "node --inspect-brk yarn hydra core:run",
+        "forger:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn hydra forger:run",
+        "forger:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn hydra forger:run",
+        "forger:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn hydra forger:run --env=test",
+        "full:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn hydra core:run --networkStart --env=test",
         "prepack": "../../node_modules/.bin/oclif-dev manifest && npm shrinkwrap",
         "postpack": "rm -f oclif.manifest.json",
         "prepublishOnly": "yarn build",
-        "relay:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark relay:run",
-        "relay:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark relay:run",
-        "relay:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark relay:run --env=test",
-        "start:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark core:run",
-        "start:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark core:run",
-        "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --env=test"
+        "relay:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn hydra relay:run",
+        "relay:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn hydra relay:run",
+        "relay:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn hydra relay:run --env=test",
+        "start:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn hydra core:run",
+        "start:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn hydra core:run",
+        "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn hydra core:run --env=test"
     },
     "dependencies": {
         "@arkecosystem/core-api": "^2.7.24",
@@ -128,7 +131,7 @@
                 "./dist/hooks/command_not_found/suggest"
             ]
         },
-        "bin": "ark",
+        "bin": "hydra",
         "topics": {
             "config": {
                 "description": "manage core config variables"

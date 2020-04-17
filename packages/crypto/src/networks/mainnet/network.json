@@ -1,18 +1,18 @@
 {
     "name": "mainnet",
-    "messagePrefix": "ARK message:\n",
+    "messagePrefix": "HYD message:\n",
     "bip32": {
-        "public": 46090600,
-        "private": 46089520
+        "public": 3238353751,
+        "private": 1307004399
     },
-    "pubKeyHash": 23,
-    "nethash": "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
-    "wif": 170,
-    "slip44": 111,
-    "aip20": 0,
+    "pubKeyHash": 100,
+    "nethash": "802b6c0522a4b4005751f10ee507018dd8e1bcb6d81ef1e123899e0d2f5538db",
+    "wif": 111,
+    "slip44": 4741444,
+    "aip20": 4741444,
     "client": {
-        "token": "ARK",
-        "symbol": "Ѧ",
-        "explorer": "https://explorer.ark.io"
+        "token": "HYD",
+        "symbol": "Ħ",
+        "explorer": "http://hydra.iop.global"
     }
 }

@@ -1,18 +1,18 @@
 {
     "name": "devnet",
-    "messagePrefix": "DARK message:\n",
+    "messagePrefix": "DHYD message:\n",
     "bip32": {
-        "public": 46090600,
-        "private": 46089520
+        "public": 3238350511,
+        "private": 1307001159
     },
-    "pubKeyHash": 30,
-    "nethash": "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-    "wif": 170,
+    "pubKeyHash": 90,
+    "nethash": "30b7368d1f78264d479c3adb38246ddde7cad58e72af51f1da9b27e04f4a005d",
+    "wif": 85,
     "slip44": 1,
     "aip20": 1,
     "client": {
-        "token": "DARK",
-        "symbol": "DѦ",
-        "explorer": "https://dexplorer.ark.io"
+        "token": "DHYD",
+        "symbol": "DĦ",
+        "explorer": "http://dev.hydra.iop.global"
     }
 }
