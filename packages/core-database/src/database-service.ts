@@ -89,6 +89,7 @@ export class DatabaseService implements Database.IDatabaseService {
             await this.emitTransactionEvents(transaction);
         }
 
+        block.data.transactions = block.transactions.map(tx => tx.data);
         this.emitter.emit(ApplicationEvents.BlockApplied, block.data);
     }
 
@@ -445,6 +446,7 @@ export class DatabaseService implements Database.IDatabaseService {
             this.emitter.emit(ApplicationEvents.TransactionReverted, block.transactions[i].data);
         }
 
+        block.data.transactions = block.transactions.map(tx => tx.data);
         this.emitter.emit(ApplicationEvents.BlockReverted, block.data);
     }
 

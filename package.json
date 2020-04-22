@@ -94,7 +94,8 @@
     },
     "workspaces": [
         "packages/*",
-        "plugins/*"
+        "plugins/*",
+        "morpheus/packages/*"
     ],
     "husky": {
         "hooks": {
