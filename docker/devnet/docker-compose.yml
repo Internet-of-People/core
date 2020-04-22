@@ -35,7 +35,6 @@ services:
     volumes:
       - ./mountpoints/config_overwrite:/root/config_overwrite # overwrite core's config
       - ./mountpoints/logs:/root/.local/state/hydra-core # logs
-      - /etc/localtime:/etc/localtime:ro
     networks:
       - core
     tty: true
