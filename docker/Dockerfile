@@ -2,7 +2,7 @@ FROM node:12-alpine
 
 COPY ./ /root/core-hydra
 
-RUN apk add --update git python make g++
+RUN apk add --update git python make g++ libjemalloc-dev
 
 RUN cd ~/core-hydra && yarn setup
 
