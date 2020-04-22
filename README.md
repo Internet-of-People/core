@@ -4,9 +4,8 @@
     <img src="banner.jpg" />
 </p>
 
-## Index
+## Table of Contents <!-- omit in toc -->
 
-- [Index](#index)
 - [Maintainers](#maintainers)
 - [Introduction](#introduction)
 - [Changelog](#changelog)
@@ -16,6 +15,9 @@
   - [2.5.9](#259)
 - [Contributing](#contributing)
 - [Documentation](#documentation)
+  - [Developing IoP Hydra Core](#developing-iop-hydra-core)
+    - [Prerequisites](#prerequisites)
+    - [Cloning & Setup for hydra-core repo](#cloning--setup-for-hydra-core-repo)
 - [Credits](#credits)
 - [License](#license)
 
@@ -38,6 +40,7 @@ Below we describe what were the changes we made release by release compared to t
 
 -   Hydra Core updated to 2.6.31 (jemalloc can now be used as a default memory manager)
 -   Jemalloc is used by the Docker images
+-   IoP DAC updated to 2.0.5
 
 ### 2.6.10
 
@@ -80,6 +83,35 @@ Small note: If editing the README, please conform to the
 
 Please visit our [Developer Portal](https://iop-stack.iop.rocks/dids-and-claims/specification/#/).
 
+### Developing IoP Hydra Core
+
+#### Prerequisites
+
+The following packages are required before you clone this repository.
+
+1. [Nodejs](https://nodejs.org/en/)
+2. [Git](https://git-scm.com/)
+3. [Docker](https://www.docker.com/)
+4. [Yarn](https://yarnpkg.com/en/)
+
+#### Cloning & Setup for hydra-core repo
+
+```bash
+# Clone the hydra core repo.
+$ git clone git@github.com:Internet-of-People/hydra-core.git
+$ cd hydra-core
+```
+
+```bash
+# Update the morpheus plugin to its latest version.
+$ git submodule update --init --force --remote
+```
+
+```bash
+# Move into the repo and run setup. `setup` hook will install all necessary Javascript dependencies to get you up and running with Hydra core.
+$ yarn setup
+```
+
 ## Credits
 
 This project exists thanks to all the people who [contribute](../../contributors).
@@ -87,4 +119,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 ## License
 
 Ark Core is released under the [MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
-Changes for IoP Hydra are released under the [MIT](LICENSE) © 2019 Decentralized Society Foundation PA
+Changes for IoP Hydra are released under the [MIT](LICENSE) © 2020 Decentralized Society Foundation PA

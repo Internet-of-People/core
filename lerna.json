@@ -3,7 +3,8 @@
     "npmClient": "yarn",
     "packages": [
         "packages/*",
-        "plugins/*"
+        "plugins/*",
+        "morpheus/packages/*"
     ],
     "useWorkspaces": true,
     "version": "2.7.24"
