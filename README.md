@@ -9,6 +9,11 @@
 - [Index](#index)
 - [Maintainers](#maintainers)
 - [Introduction](#introduction)
+- [Changelog](#changelog)
+  - [2.6.31](#2631)
+  - [2.6.10](#2610)
+    - [Important Notes](#important-notes)
+  - [2.5.9](#259)
 - [Contributing](#contributing)
 - [Documentation](#documentation)
 - [Credits](#credits)
@@ -24,6 +29,42 @@
 
 This repository contains the code for the IoP Hydra Blockchain. The IoP Hydra Blockchain is an ARK bridgechain and follows upstream changes as closely as possible.
 Changes to naming schemes, documentation and other auxiliary files are thus kept to a minimum. If you want to learn more about the code, check out the original code base at [@ARKEcosystem](https://github.com/ARKEcosystem/core.git).
+
+## Changelog
+
+Below we describe what were the changes we made release by release compared to the original Ark code.
+
+### 2.6.31
+
+-   Hydra Core updated to 2.6.31 (jemalloc can now be used as a default memory manager)
+-   Jemalloc is used by the Docker images
+
+### 2.6.10
+
+-   IoP DAC added as a submodule (hence `plugins.js` config files were updated as well)
+-   Custom Docker scripts and [images](https://hub.docker.com/repository/docker/internetofpeople/hydra-core) are updated
+-   Fix: During `BlockApplied` and `BlockReverted` events the block's data must contain the transactions:
+    -   at: <https://github.com/ArkEcosystem/core/blob/master/packages/core-database/src/database-service.ts#L92>
+    -   and: <https://github.com/ArkEcosystem/core/blob/master/packages/core-database/src/database-service.ts#L448>
+
+#### Important Notes
+
+This is a mandatory upgrade. To be able to use Hydra, you must upgrade your `plugins.js` file in order to be part of the consensus.
+
+##### Core Controller
+
+If you are using [core-controler](https://github.com/Internet-of-People/core-control), we have now there a `develop` and soon a `master` branch where you can read how you can upgrade your code.
+
+##### Docker
+
+If you are using Docker, we provide a `mountpoints.tar.gz` file for each network which you can unpack (and overwrite) as it's described in our Docker documentation.
+
+### 2.5.9
+
+-   Custom Docker scripts added
+-   Chain network (p2p, api, webhook ports), config (database password/user/dbname, peers, delegates) and crypto (milestones, exceptions, genesis block, network) parameters are changed
+-   Added a delegate guide
+-   Fix: Removed genesis block hacking from <https://github.com/ArkEcosystem/core/blob/master/packages/crypto/src/blocks/block.ts#L100>
 
 ## Contributing
 
