@@ -1,4 +1,6 @@
 import { app } from "@arkecosystem/core-container";
+import { ApplicationEvents } from "@arkecosystem/core-event-emitter";
+import { EventEmitter } from "@arkecosystem/core-interfaces";
 import { createServer, mountServer, plugins } from "@arkecosystem/core-http-utils";
 import h2o2 from "@hapi/h2o2";
 import * as handlers from "./handlers";
@@ -53,5 +55,7 @@ export const startServer = async config => {
         });
     }
 
-    return mountServer("Wallet API", server);
+    return mountServer("Wallet API", server).then(() => {
+        app.resolvePlugin<EventEmitter.EventEmitter>("event-emitter").emit(ApplicationEvents.WalletApiStarted);
+    });
 };
