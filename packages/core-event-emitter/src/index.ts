@@ -42,4 +42,5 @@ export enum ApplicationEvents {
     TransactionReverted = "transaction.reverted",
     WalletVote = "wallet.vote",
     WalletUnvote = "wallet.unvote",
+    WalletApiStarted = "wallet.api.started",
 }
