@@ -29,6 +29,12 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.6.31+p1
+
+-   IoP DAC updated to 2.0.6
+-   Rate limiter settings changed
+-   Wallet API emits event when started
+
 ### 2.6.31
 
 -   Hydra Core updated to 2.6.31 (jemalloc can now be used as a default memory manager)
