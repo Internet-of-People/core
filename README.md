@@ -1,4 +1,4 @@
-# IoP Hydra Core
+# IOP Hydra Core
 
 <p align="center">
     <img src="banner.jpg" />
@@ -29,16 +29,20 @@
 
 ## Introduction
 
-This repository contains the code for the IoP Hydra Blockchain. The IoP Hydra Blockchain is an ARK bridgechain and follows upstream changes as closely as possible.
+This repository contains the code for the IOP Hydra Blockchain. The IOP Hydra Blockchain is an ARK bridgechain and follows upstream changes as closely as possible.
 Changes to naming schemes, documentation and other auxiliary files are thus kept to a minimum. If you want to learn more about the code, check out the original code base at [@ARKEcosystem](https://github.com/ARKEcosystem/core.git).
 
 ## Changelog
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.6.31+p2
+
+-   IOP DAC updated to 3.1.0
+
 ### 2.6.31+p1
 
--   IoP DAC updated to 2.0.6
+-   IOP DAC updated to 2.0.6
 -   Rate limiter settings changed
 -   Wallet API emits event when started
 
@@ -46,11 +50,11 @@ Below we describe what were the changes we made release by release compared to t
 
 -   Hydra Core updated to 2.6.31 (jemalloc can now be used as a default memory manager)
 -   Jemalloc is used by the Docker images
--   IoP DAC updated to 2.0.5
+-   IOP DAC updated to 2.0.5
 
 ### 2.6.10
 
--   IoP DAC added as a submodule (hence `plugins.js` config files were updated as well)
+-   IOP DAC added as a submodule (hence `plugins.js` config files were updated as well)
 -   Custom Docker scripts and [images](https://hub.docker.com/repository/docker/internetofpeople/hydra-core) are updated
 -   Fix: During `BlockApplied` and `BlockReverted` events the block's data must contain the transactions:
     -   at: <https://github.com/ArkEcosystem/core/blob/master/packages/core-database/src/database-service.ts#L92>
@@ -89,7 +93,7 @@ Small note: If editing the README, please conform to the
 
 Please visit our [Developer Portal](https://iop-stack.iop.rocks/dids-and-claims/specification/#/).
 
-### Developing IoP Hydra Core
+### Developing IOP Hydra Core
 
 #### Prerequisites
 
@@ -125,4 +129,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 ## License
 
 Ark Core is released under the [MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
-Changes for IoP Hydra are released under the [MIT](LICENSE) © 2020 Decentralized Society Foundation PA
+Changes for IOP Hydra are released under the [MIT](LICENSE) © 2020 Decentralized Society Foundation PA
