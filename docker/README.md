@@ -1,14 +1,14 @@
-# IoP Hydra Core Docker
+# IOP Hydra Core Docker
 
 ## Introduction
 
-Official Production ready IoP Hydra Core images available now at [Docker Hub](https://hub.docker.com/r/internetofpeople/hydra-core).
+Official Production ready IOP Hydra Core images available now at [Docker Hub](https://hub.docker.com/r/internetofpeople/hydra-core).
 
 ## Usage
 
 ### Install
 
-To be able to use IoP Hydra with docker, you need two things from either the `testnet`, `devnet` or `mainnet` folder:
+To be able to use IOP Hydra with docker, you need two things from either the `testnet`, `devnet` or `mainnet` folder:
 
 -   The `docker-compose.yml` file.
 -   The `mountpoints.tar.gz` file unpacked to the same directory level where you put the `docker-compose.yml`.
@@ -27,7 +27,7 @@ Use this if you need to update the `delegates.json` for example.
 $ NETWORK=[testnet|devnet|mainnet] MODE=[genesis|normal] FORGING_MODE=[auto_forge|no_forge] docker-compose up -d
 ```
 
-#### IoP Hydra Only
+#### IOP Hydra Only
 
 ```bash
 # Start Database, Hydra
