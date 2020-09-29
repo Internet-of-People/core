@@ -1,4 +1,0 @@
-[submodule "morpheus"]
-	path = morpheus
-	url = ../morpheus-ts
-	branch = release-3.1.1

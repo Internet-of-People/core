@@ -9,6 +9,7 @@ module.exports = {
     },
     "@arkecosystem/core-state": {},
     "@arkecosystem/core-magistrate-transactions": {},
+    "@internet-of-people/hydra-plugin": {},
     "@arkecosystem/core-database-postgres": {
         connection: {
             host: process.env.CORE_DB_HOST || "localhost",
@@ -18,7 +19,6 @@ module.exports = {
             password: process.env.CORE_DB_PASSWORD || "password",
         },
     },
-    "@internet-of-people/morpheus-hydra-plugin": {},
     "@arkecosystem/core-transaction-pool": {
         enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
         maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,

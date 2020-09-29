@@ -4,10 +4,11 @@
     "description": "The packages that make up the ARK Core",
     "scripts": {
         "lerna": "./node_modules/lerna/cli.js",
-        "setup": "yarn && yarn bootstrap && yarn build",
-        "setup:clean": "yarn && yarn clean && yarn bootstrap && yarn build",
+        "setup": "yarn --frozen-lockfile && yarn bootstrap && yarn build",
+        "setup:clean": "yarn --frozen-lockfile && yarn clean && yarn bootstrap && yarn build",
         "bootstrap": "yarn lerna bootstrap",
         "clean": "yarn lerna clean --yes",
+        "clean:all": "yarn clean && rm -rf node_modules && find packages/ -iname dist -exec rm -rf \\{\\} \\; &>/dev/null && find packages/ -iname node_modules -exec rm -rf \\{\\} \\; &>/dev/null",
         "build": "yarn lerna run build",
         "lint": "./node_modules/tslint/bin/tslint -c ./tslint.json -p ./tslint-config.json './packages/**/*/src/**/*.ts' --fix",
         "format": "yarn lint && yarn prettier",
@@ -94,8 +95,7 @@
     },
     "workspaces": [
         "packages/*",
-        "plugins/*",
-        "morpheus/packages/*"
+        "plugins/*"
     ],
     "husky": {
         "hooks": {
