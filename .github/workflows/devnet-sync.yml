@@ -26,7 +26,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
               with:
-                  ref: 2.6
+                  ref: 2.6.31+p2
             - name: Cache node modules
               uses: actions/cache@v1
               with:
