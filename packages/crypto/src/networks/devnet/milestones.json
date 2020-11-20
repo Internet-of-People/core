@@ -37,11 +37,14 @@
         "aip11": true,
         "htlcEnabled": true,
         "p2p": {
-            "minimumVersions": ["^2.6 || ^2.6.0-next.9"]
-        }
+            "minimumVersions": [
+                "^2.6 || ^2.6.0-next.9"
+            ]
+        },
+        "morpheus": true
     },
     {
-        "height": 5636000,
-        "aip36": true
+        "height": 2488500,
+        "coeus": true
     }
 ]

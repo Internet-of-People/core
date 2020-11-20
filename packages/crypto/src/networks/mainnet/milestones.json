@@ -40,6 +40,11 @@
             "minimumVersions": [
                 "^2.6 || ^2.6.0-next.9"
             ]
-        }
+        },
+        "morpheus": true
+    },
+    {
+        "height": 3252700,
+        "coeus": true
     }
 ]

@@ -36,6 +36,11 @@
         "htlcEnabled": true
     },
     {
+        "height": 50,
+        "coeus": true,
+        "morpheus": true
+    },
+    {
         "height": 7201,
         "reward": 800000000
     }
