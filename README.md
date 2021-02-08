@@ -36,6 +36,10 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.7.24+p1
+
+-   Upgraded Hydra Core to 2.7.24
+
 ### 2.6.31+p3
 
 -   IOP SSI updated to 4.0.2
