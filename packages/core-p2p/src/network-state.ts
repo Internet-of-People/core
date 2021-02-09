@@ -43,7 +43,7 @@ export class NetworkState implements P2P.INetworkState {
         const lastBlock: Interfaces.IBlock = app.resolvePlugin("blockchain").getLastBlock();
 
         const peers: P2P.IPeer[] = storage.getPeers();
-        const minimumNetworkReach: number = app.resolveOptions("p2p").minimumNetworkReach || 20;
+        const minimumNetworkReach: number = app.resolveOptions("p2p").minimumNetworkReach || 10;
 
         if (monitor.isColdStart()) {
             monitor.completeColdStart();

@@ -6,20 +6,20 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Maintainers](#maintainers)
-- [Introduction](#introduction)
-- [Changelog](#changelog)
-  - [2.6.31](#2631)
-  - [2.6.10](#2610)
-    - [Important Notes](#important-notes)
-  - [2.5.9](#259)
-- [Contributing](#contributing)
-- [Documentation](#documentation)
-  - [Developing IoP Hydra Core](#developing-iop-hydra-core)
-    - [Prerequisites](#prerequisites)
-    - [Cloning & Setup for hydra-core repo](#cloning--setup-for-hydra-core-repo)
-- [Credits](#credits)
-- [License](#license)
+-   [Maintainers](#maintainers)
+-   [Introduction](#introduction)
+-   [Changelog](#changelog)
+    -   [2.6.31](#2631)
+    -   [2.6.10](#2610)
+        -   [Important Notes](#important-notes)
+    -   [2.5.9](#259)
+-   [Contributing](#contributing)
+-   [Documentation](#documentation)
+    -   [Developing IoP Hydra Core](#developing-iop-hydra-core)
+        -   [Prerequisites](#prerequisites)
+        -   [Cloning & Setup for hydra-core repo](#cloning--setup-for-hydra-core-repo)
+-   [Credits](#credits)
+-   [License](#license)
 
 ## Maintainers
 
@@ -35,6 +35,10 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 ## Changelog
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
+
+### 2.7.24+p2
+
+-   Upgraded SSI/DNS plugin to 4.0.6
 
 ### 2.7.24+p1
 

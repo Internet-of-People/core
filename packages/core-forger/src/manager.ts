@@ -234,7 +234,7 @@ export class ForgerManager {
             }
         }
 
-        if (networkState.getQuorum() < 0.66) {
+        if (networkState.getQuorum() < 0.51) {
             this.logger.info("Fork 6 - Not enough quorum to forge next block. Will not forge.");
             this.logger.debug(`Network State: ${networkState.toJson()}`);
 

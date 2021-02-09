@@ -2403,80 +2403,80 @@
     lodash.set "^4.3.2"
     micromatch "^4.0.2"
 
-"@internet-of-people/coeus-node@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-node/-/coeus-node-4.0.5.tgz#abff880a56f10b6818aa75dd9c036272858aea20"
-  integrity sha512-PXCYZLtJAht/iOSXfRnIV09yAP7XfvvJintnm2ukJlv5R83Q4vJOC+6gAUOGpFnIXzIvDwcfrtb5ucQhCMOQmA==
+"@internet-of-people/coeus-node@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-node/-/coeus-node-4.0.6.tgz#5e97f9b71459bc57a8f5e6f8d6dc46dfa4a6548c"
+  integrity sha512-tqCyJYx4olkWJFtfmEtnadzhufeEI9souT7SGHvq9qPdGISzvD2LOwKvJyc38MUG7YCwnqRH/Gzgi5D2pq13tA==
   dependencies:
-    "@arkecosystem/core-container" "^2.6.31"
-    "@arkecosystem/core-interfaces" "^2.6.31"
-    "@arkecosystem/core-transactions" "^2.6.31"
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/core-container" "^2.7.24"
+    "@arkecosystem/core-interfaces" "^2.7.24"
+    "@arkecosystem/core-transactions" "^2.7.24"
+    "@arkecosystem/crypto" "^2.7.24"
     "@hapi/boom" "^8.0.0"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/coeus-proto" "4.0.5"
-    "@internet-of-people/hydra-plugin-core" "4.0.5"
+    "@internet-of-people/coeus-proto" "4.0.6"
+    "@internet-of-people/hydra-plugin-core" "4.0.6"
     "@internet-of-people/sdk-wasm" "0.0.11"
 
-"@internet-of-people/coeus-proto@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-proto/-/coeus-proto-4.0.5.tgz#6a536c4252a729898d40f88095f983ed732c6269"
-  integrity sha512-HtcHsoGhdfkHYIbPtYObDTbDlvXpV7fv2fQdvQjBa/Zd9+YzzcbzsZPvBP60PE5ZEO0X7dDRIMsOr0quzzyi+Q==
+"@internet-of-people/coeus-proto@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-proto/-/coeus-proto-4.0.6.tgz#1caf453229f2d31234f568139788c32608a7a4d1"
+  integrity sha512-OGP/O71CLl6smLh+pU+v0A0qwQQ87/SJurFMyg0ayf3c8sRTuIShAcg7RprHuiQX+sWqI3rME5AgK0LLjp4Qcg==
   dependencies:
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/crypto" "^2.7.24"
     "@internet-of-people/sdk-wasm" "0.0.11"
     bytebuffer "5.0.1"
 
-"@internet-of-people/did-manager@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/did-manager/-/did-manager-4.0.5.tgz#b6d1beec049fdd6d94d3250139bedcebf10a3e54"
-  integrity sha512-Y18GQ1v451CWYQhsaXYhbUn9UASiHmZyzcu/XnOYuCU5KJex9QaIJeAx0jCyHmQ2AMeh6O+8O2pHpC8fTaiWmg==
+"@internet-of-people/did-manager@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/did-manager/-/did-manager-4.0.6.tgz#a6015523dc3c004558822ed7c771858e14239699"
+  integrity sha512-jDMbjBiClMbMMMbiJOZLKtFaNqc3e/P+0cfuL2imoxAWkURKHuXOj2HRiJGDYPmO8eUNUJkwZFTkj/DeACzHcA==
   dependencies:
-    "@arkecosystem/core-container" "^2.6.31"
-    "@arkecosystem/core-interfaces" "^2.6.31"
-    "@arkecosystem/core-transactions" "^2.6.31"
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/core-container" "^2.7.24"
+    "@arkecosystem/core-interfaces" "^2.7.24"
+    "@arkecosystem/core-transactions" "^2.7.24"
+    "@arkecosystem/crypto" "^2.7.24"
     "@hapi/boom" "^8.0.0"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/hydra-plugin-core" "4.0.5"
-    "@internet-of-people/sdk" "4.0.5"
+    "@internet-of-people/hydra-plugin-core" "4.0.6"
+    "@internet-of-people/sdk" "4.0.6"
     awilix "^4.2.2"
     lodash.clonedeep "4.5.0"
     optional-js "2.1.1"
 
-"@internet-of-people/hydra-plugin-core@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin-core/-/hydra-plugin-core-4.0.5.tgz#dc12405976e73a974544138148e7c8def22ef53a"
-  integrity sha512-Z9ujuRCv6i1dpzI7m+QJEpd/sbudmIealM/27MretofUFb+OzZYZj4s7d2zNo/CKN+4v/G+Wpd1ZIwM1pw1zgg==
+"@internet-of-people/hydra-plugin-core@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin-core/-/hydra-plugin-core-4.0.6.tgz#ff977bc7dad7c2b5e5f1287b072889a01d0ac54e"
+  integrity sha512-irvhof2zvnkEsi/JBOul9YHTyyFwdjLF5GQl2Yk2FWG87GMTxktF7jQ4qmzEYzIQL4iFBDZGV2dKnKRSVVuuVg==
   dependencies:
-    "@arkecosystem/core-interfaces" "^2.6.31"
-    "@arkecosystem/core-transactions" "^2.6.31"
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/core-interfaces" "^2.7.24"
+    "@arkecosystem/core-transactions" "^2.7.24"
+    "@arkecosystem/crypto" "^2.7.24"
 
-"@internet-of-people/hydra-plugin@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin/-/hydra-plugin-4.0.5.tgz#331f374905a8588fdc2b8cc8246518284df9b2a6"
-  integrity sha512-ow0yEoB0DWPsGO7c25GLO0YX0K3Er4t4STR8GG5W9tfjqEm1CIYTKe30hgasfDM88xMDm8DDPJdXM+tBhkor4g==
+"@internet-of-people/hydra-plugin@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin/-/hydra-plugin-4.0.6.tgz#d8cc24ef0b692fcb14e360937f0f7844a2f2c2c1"
+  integrity sha512-7By25dMQscEZj0qndwctNBBsCz5tloigW9u/CXIB7H7y2eGrX9pBaGusBj0u0Obqxr+ZYyjOp9nfmzxsxuUyxg==
   dependencies:
-    "@arkecosystem/core-event-emitter" "^2.6.31"
-    "@arkecosystem/core-interfaces" "^2.6.31"
-    "@arkecosystem/core-transactions" "^2.6.31"
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/core-event-emitter" "^2.7.24"
+    "@arkecosystem/core-interfaces" "^2.7.24"
+    "@arkecosystem/core-transactions" "^2.7.24"
+    "@arkecosystem/crypto" "^2.7.24"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/coeus-node" "4.0.5"
-    "@internet-of-people/did-manager" "4.0.5"
-    "@internet-of-people/hydra-plugin-core" "4.0.5"
-    "@internet-of-people/sdk" "4.0.5"
+    "@internet-of-people/coeus-node" "4.0.6"
+    "@internet-of-people/did-manager" "4.0.6"
+    "@internet-of-people/hydra-plugin-core" "4.0.6"
+    "@internet-of-people/sdk" "4.0.6"
     awilix "^4.2.2"
     optional-js "2.1.1"
     p-queue "6.2.1"
 
-"@internet-of-people/morpheus-crypto@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/morpheus-crypto/-/morpheus-crypto-4.0.5.tgz#5e133410d13d484a32e0c7277a73019444c92d28"
-  integrity sha512-FuuIJeYftwYCYecki4k0/fLW7/kBiVrbL4nhclrqOrZlEIKSWwbp1pZppC4a36zAKzqalOykX6OzIWXhiwegpg==
+"@internet-of-people/morpheus-crypto@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/morpheus-crypto/-/morpheus-crypto-4.0.6.tgz#1215283d29d0182e8df13887a38c0749fd13d27c"
+  integrity sha512-epPVRCuC/HoYK5S9bwwBTXo3tY9bkJSOyn7fJtChZJa+xgtDYZEqJCiRYCax35uR+6yvhe2VUSrHj8o/PmOcEQ==
   dependencies:
-    "@arkecosystem/crypto" "^2.6.31"
+    "@arkecosystem/crypto" "^2.7.24"
     "@internet-of-people/sdk-wasm" "0.0.11"
     lodash.clonedeep "4.5.0"
     multibase "0.6.0"
@@ -2487,13 +2487,13 @@
   resolved "https://registry.yarnpkg.com/@internet-of-people/sdk-wasm/-/sdk-wasm-0.0.11.tgz#5204ee7888bdc96af2417a3d2f86d8838c96c524"
   integrity sha512-Y/X2lffSYdKcgUIdySiNO8rI3yJjs9u1aoQYdjA30uVcJ4SALUWBmbjdY1fYM9uHWG9jkx2pqbW+u5wqggHDOA==
 
-"@internet-of-people/sdk@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@internet-of-people/sdk/-/sdk-4.0.5.tgz#9aa0830a0b32fb7267d91919fe42ac65df47ad62"
-  integrity sha512-5xJyWU+30fcyYi9vSlWKvM8oD94Py4vOexoZApmAvcAxudu7yQNkmqlFwJaDA26kUi6/O41BYDMGr9YbuP+3lw==
+"@internet-of-people/sdk@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/sdk/-/sdk-4.0.6.tgz#f25fbced2dc20540ec25541c982ed58247da63b6"
+  integrity sha512-ZCf1OUO+Z+gF+OjAVKZc1Wj2UY2G2FckqpAU1MTo+Dkgoywz6U6wxKmnjXivcBjQLGqq8bimB9Xk0PmwxassFw==
   dependencies:
-    "@arkecosystem/crypto" "^2.6.31"
-    "@internet-of-people/morpheus-crypto" "4.0.5"
+    "@arkecosystem/crypto" "^2.7.24"
+    "@internet-of-people/morpheus-crypto" "4.0.6"
     "@internet-of-people/sdk-wasm" "0.0.11"
     axios "0.19.0"
     bytebuffer "5.0.1"
@@ -7593,6 +7593,15 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es-to-primitive@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/es-to-primitive/-/es-to-primitive-1.2.1.tgz#e55cd4c9cdc188bcefb03b366c736323fc5c898a"
+  integrity sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
+  dependencies:
+    is-callable "^1.1.4"
+    is-date-object "^1.0.1"
+    is-symbol "^1.0.2"
+
 es6-promise@^4.0.3:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
@@ -8126,7 +8135,7 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-find-up@^2.0.0:
+find-up@^2.0.0, find-up@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
   integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
@@ -8673,6 +8682,11 @@ has-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
   integrity sha1-uhqPGvKg/DllD1yFA2dwQSIGO0Q=
 
+has-symbols@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.1.tgz#9f5214758a44196c406d9bd76cebf81ec2dd31e8"
+  integrity sha512-PLcsoqu++dmEIZB+6totNFKq/7Do+Z0u4oT0zKOJNl3lYK6vGwwu2hjHs+68OEZbTjiUE9bgOABXbP/GvrS0Kg==
+
 has-unicode@^2.0.0, has-unicode@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
@@ -9072,7 +9086,7 @@ into-stream@^5.1.0:
     from2 "^2.3.0"
     p-is-promise "^3.0.0"
 
-invariant@^2.2.2:
+invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
