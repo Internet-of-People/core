@@ -1,11 +1,21 @@
 #!/bin/sh
 set -e
 
+
 if [ ! -d "$HOME/.config/hydra-core" ]; then
   echo "Configs need to be generated..."
   /root/core-hydra/packages/core/bin/run config:publish --network=$1
-  cp -a /root/config_overwrite/. "/root/.config/hydra-core/$1"
-  mv /root/.config/hydra-core/$1/$1.env /root/.config/hydra-core/$1/.env
+
+  if [ -d "/root/config_overwrite/" ]; then
+    echo "Config overwrides provided, copying to its final place..."
+    cp -a /root/config_overwrite/. "/root/.config/hydra-core/$1"
+    mv /root/.config/hydra-core/$1/$1.env /root/.config/hydra-core/$1/.env
+  fi
+
+  if [ ! -z "$DONT_USE_ENV_FILE" ]; then
+    echo "Instructed NOT to use .env file. Deleting it..."
+    rm /root/.config/hydra-core/$1/.env
+  fi
 
   if [ -f /root/.config/hydra-core/$1/bip39 ]; then
     bip39=$(cat /root/.config/hydra-core/$1/bip39)
