@@ -7,7 +7,7 @@ if [ ! -d "$HOME/.config/hydra-core" ]; then
   /root/core-hydra/packages/core/bin/run config:publish --network=$1
 
   if [ -d "/root/config_overwrite/" ]; then
-    echo "Config overwrides provided, copying to its final place..."
+    echo "Config overwrite provided, copying to its final place..."
     cp -a /root/config_overwrite/. "/root/.config/hydra-core/$1"
     mv /root/.config/hydra-core/$1/$1.env /root/.config/hydra-core/$1/.env
   fi
