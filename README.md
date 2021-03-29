@@ -104,7 +104,7 @@ Small note: If editing the README, please conform to the
 
 ## Documentation
 
-Please visit our [Developer Portal](https://iop-stack.iop.rocks/dids-and-claims/specification/#/).
+Please visit our [Developer Portal](https://developer.iop.technology).
 
 ### Developing IOP Hydra Core Locally
 
