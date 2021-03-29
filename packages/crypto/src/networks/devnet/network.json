@@ -13,6 +13,6 @@
     "client": {
         "token": "DHYD",
         "symbol": "DĦ",
-        "explorer": "http://dev.hydra.iop.global"
+        "explorer": "https://dev.explorer.hydraledger.io"
     }
 }
