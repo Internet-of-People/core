@@ -3,7 +3,7 @@ export const defaults = {
     host: process.env.CORE_API_HOST || "0.0.0.0",
     port: process.env.CORE_API_PORT || 4003,
     cache: {
-        enabled: true,
+        enabled: process.env.CORE_API_CACHE_ENABLED || false,
         /**
          * How many seconds the server will try to complete the request and cache the result.
          *
