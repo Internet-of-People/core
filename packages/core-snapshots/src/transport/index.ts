@@ -8,7 +8,6 @@ import zlib from "zlib";
 import { app } from "@arkecosystem/core-container";
 import { ApplicationEvents } from "@arkecosystem/core-event-emitter";
 import { EventEmitter, Logger } from "@arkecosystem/core-interfaces";
-import { Managers } from "@arkecosystem/crypto";
 
 import * as utils from "../utils";
 import { Codec } from "./codec";
@@ -18,10 +17,6 @@ const logger = app.resolvePlugin<Logger.ILogger>("logger");
 const emitter = app.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");
 
 const fixData = (table, data) => {
-    if (table === "blocks" && data.height === 1) {
-        data.id = Managers.configManager.get("genesisBlock").id;
-    }
-
     // For version=1 transactions the nonce is set automatically at database level (by a trigger
     // on the transactions table). However, the database library we use is upset if we don't
     // provide it, so supply a dummy value here.

@@ -36,6 +36,10 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.7.24+p3
+
+-   Fixed: snapshot restore
+
 ### 2.7.24+p2
 
 -   Upgraded SSI/DNS plugin to 4.0.6
