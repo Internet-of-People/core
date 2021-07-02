@@ -39,6 +39,7 @@ Below we describe what were the changes we made release by release compared to t
 ### 2.7.24+p3
 
 -   Fixed: snapshot restore
+-   Upgraded SSI/DNS plugin to 5.0.0
 
 ### 2.7.24+p2
 
