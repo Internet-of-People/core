@@ -3,13 +3,13 @@
     "version": "5.0.0-rc.1",
     "description": "A plugin for Hydra blockchain nodes that add Morpheus and Coeus specific custom transaction types and a layer 2 consensus with its own states.",
     "author": {
-        "url": "https://iop.global/dsf",
+        "url": "https://hydraledger.io/",
         "name": "Internet of People",
         "email": "dev@iop-ventures.com"
     },
     "private": true,
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@internet-of-people/hydra-plugin": "5.0.0-rc.1"
+        "@internet-of-people/hydra-plugin": "5.0.0-rc.2"
     }
 }
