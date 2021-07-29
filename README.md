@@ -143,49 +143,18 @@ $ cd hydra-core
 $ sudo apt install python2
 ```
 
-##### Developing Hydra Core Only
-
 ```bash
 # Move into the repo and run setup. `setup` hook will install all necessary Javascript dependencies to get you up and running with Hydra core.
 $ yarn setup
 ```
 
-##### Developing Morpheus/Coeus
-
-If you'd like to develop Morpheus or Coeus code, run the below command to setup the code.
-This command requires the [morpheus-ts repo](https://github.com/Internet-of-People/morpheus-ts) to be cloned out to the same directory, where `hydra-core` sits.
-
-```bash
-# Under the morpheus-ts repo, follow the installation procedure
-$ npm install
-$ npm run build
-```
-
-And then, go back to the `hydra-core` repo and run the following command:
-
-```bash
-$ ./init-iop-dev-env.sh
-```
-
-This command will symlink the morpheus-ts repo to the right place and sets up everything you need.
-
 #### Step 2. Start PostgreSQL via Docker
 
-First, navigate to the `docker/testnet` directory and unpack the default testnet config:
-
 ```bash
-$ tar -xvf mountpoints.tar.gz
-```
-
-Second, run the command below to start a PostgreSQL container.
-
-```bash
-$ NETWORK=testnet MODE=normal FORGING_MODE=no_forge docker-compose up -d postgres
+$ docker run -it --rm --name postgres-hydra -e POSTGRES_DB=hydra_testnet -e POSTGRES_USER=hydra -e POSTGRES_PASSWORD=password postgres:11-alpine
 ```
 
 #### Step 3. Start Hydra Core
-
-To start Hydra core, navigate back to the repo's root and then run the following commands:
 
 ```bash
 # Reset/Create the config

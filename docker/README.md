@@ -6,36 +6,48 @@ Official, production-ready IOP Hydra Core images available at [Docker Hub](https
 
 ## Run with Docker
 
-> Notes:
->
-> -   you must have a `config` directory containing a [testnet|devnet|mainnet].env file.
-> -   if you'd like to run a delegate, you can configurate it by providing its passphrase in the `config/delegates.json` file in a format: `{"secrets":["YOUR_DELEGATE_PASSPHRASE"]}`
-> -   by default the node starts as a genesis node with forger enabled. You can adjust it by suffixing with these parameters the commands below: `[testnet|devnet|mainnet] [genesis|normal] [auto_forge|no_forge]`. So for example starting a simple relay node on testnet would look like:
->     ```bash
->     $ docker run --link postgres-hydra -it -p 4700:4700 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-testnet testnet normal no_forge
->     ```
+Run these command below under the `docker` directory, after read the notes below as well.
 
-1. Start PostgreSQL locally
+### 1. Start PostgreSQL locally
+
     ```bash
     $ docker run -it --rm --name postgres-hydra -e POSTGRES_DB=hydra_[testnet|devnet|mainnet] -e POSTGRES_USER=hydra -e POSTGRES_PASSWORD=password postgres:11-alpine
     ```
-2. Start Hydra Core locally
 
-    ```bash
-    # testnet
-    $ docker run --link postgres-hydra -it -p 4700:4700 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-testnet
+### 2. Start Hydra Core locally
 
-    # devnet
-    $ docker run --link postgres-hydra -it -p 4702:4702 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-devnet devnet normal auto_forge
+You can start the Hydra Core as a relay or forger; in normal or genesis mode; connecting to testnet/devnet/mainnet. You can do that by providing some extra parameters to the end of the docker command. If you provide none, it will use `testnet genesis auto_forge`.
 
-    # mainnet
-    $ docker run --link postgres-hydra -it -p 4701:4701 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-mainnet mainnet normal auto_forge
-    ```
+```bash
+# Observe the optional parameters in the end of the command:
+$ docker ... internetofpeople/hydra-core:latest-[testnet|devnet|mainnet] [normal|genesis] [auto_forge|no_forge]
+```
 
-3. Start Hydra Block Explorer and connect to the either locally running Hydra Core or IOP's testnet/devnet/mainnet
-    ```bash
-    $ docker run --link core -it -p 80 --name explorer --rm internetofpeople/hydra-core:latest-[local|testnet|devnet|mainnet]
-    ```
+#### Example: Starting Up Forgers
+
+```bash
+# testnet
+$ docker run --link postgres-hydra -it -p 4700:4700 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-testnet testnet normal auto_forge
+
+# devnet
+$ docker run --link postgres-hydra -it -p 4702:4702 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-devnet devnet normal auto_forge
+
+# mainnet
+$ docker run --link postgres-hydra -it -p 4701:4701 -p 4703:4703 -p 4040:4040 --name core --rm --mount type=bind,src=${PWD}/config,dst=/root/config_overwrite internetofpeople/hydra-core:latest-mainnet mainnet normal auto_forge
+```
+
+### 3. Start Hydra Block Explorer
+
+By starting it you can connect to the either locally running Hydra Core or IOP's testnet/devnet/mainnet.
+
+```bash
+$ docker run --link core -it -p 80 --name explorer --rm internetofpeople/hydra-core:latest-[local|testnet|devnet|mainnet]
+```
+
+> Notes:
+>
+> -   you must have a `config` directory containing a [testnet|devnet|mainnet].env file. Under `docker` directory you have one by default for all networks.
+> -   if you'd like to run a delegate, you can configurate it by providing its passphrase in the `config/delegates.json` file in a format: `{"secrets":["YOUR_DELEGATE_PASSPHRASE"]}`
 
 ## Run with Docker Compose
 
@@ -79,12 +91,12 @@ $ docker build -f docker/Dockerfile -t internetofpeople/hydra-core:latest-[testn
 ```bash
 # Publish
 $ docker login
-$ docker push internetofpeople/hydra-core
+$ docker push internetofpeople/hydra-core --all-tags # BE CAREFUL when publishing mainnet images.
 ```
 
-### Local testing without publishing
+### Local Testing Without Publishing
 
-You can use the development package repository at npm.iop.technology by providing an extra build argument to docker.
+You can use the development package registry at npm.iop.technology by providing an extra build argument to docker. This way in the container yarn will use IOP's registry to install packages for Hydra Core, hence you can test easily new Hydra Plugin versions.
 
 ```bash
 # Build
