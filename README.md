@@ -155,7 +155,7 @@ $ yarn setup
 #### Step 2. Start PostgreSQL via Docker
 
 ```bash
-$ docker run -it --rm --name postgres-hydra -e POSTGRES_DB=hydra_testnet -e POSTGRES_USER=hydra -e POSTGRES_PASSWORD=password postgres:11-alpine
+$ docker run -it --rm --name postgres-hydra -p 5432:5432 -e POSTGRES_DB=hydra_testnet -e POSTGRES_USER=hydra -e POSTGRES_PASSWORD=password postgres:11-alpine
 ```
 
 #### Step 3. Start Hydra Core
