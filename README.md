@@ -32,6 +32,10 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.7.24+p7
+
+-   Upgraded SSI/DNS plugin to 5.0.4
+
 ### 2.7.24+p6
 
 -   Upgraded SSI/DNS plugin to 5.0.2

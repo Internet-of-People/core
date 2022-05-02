@@ -2403,10 +2403,10 @@
     lodash.set "^4.3.2"
     micromatch "^4.0.2"
 
-"@internet-of-people/coeus-node@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fcoeus-node/-/coeus-node-5.0.2.tgz#ffa92d0d4e5e589b73c9c69cf6ae71cbd69750f7"
-  integrity sha512-sM88T1Von9cexHOhoYQ9oUh+t08Y3QjUm0tUWnpiKvIxtRcvw/21zqTE3kcICBroPGfU655QZfqC5UpuPr0+pQ==
+"@internet-of-people/coeus-node@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-node/-/coeus-node-5.0.4.tgz#094ba97e703445dcfb16120232d029e9ed587c20"
+  integrity sha512-u/iOBxM/LnL/Za7Y8e1T5/wbnpmntPeZkPT6eGsv/fGqlGNxDyQhbqmhxIiSpeNR+k5B2jknV627jcKXF/D2ww==
   dependencies:
     "@arkecosystem/core-container" "^2.7.24"
     "@arkecosystem/core-interfaces" "^2.7.24"
@@ -2414,23 +2414,23 @@
     "@arkecosystem/crypto" "^2.7.24"
     "@hapi/boom" "^8.0.0"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/coeus-proto" "5.0.2"
-    "@internet-of-people/hydra-plugin-core" "5.0.2"
-    "@internet-of-people/node-wasm" "0.0.14"
+    "@internet-of-people/coeus-proto" "5.0.4"
+    "@internet-of-people/hydra-plugin-core" "5.0.4"
+    "@internet-of-people/node-wasm" "0.0.15"
 
-"@internet-of-people/coeus-proto@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fcoeus-proto/-/coeus-proto-5.0.2.tgz#0eca0e46e0d67fd62a9e1f64306ef781f90dc44c"
-  integrity sha512-x+PVd0EEFVtZeOtADUK88mUB9JXQl5UsVdpwFRLlWSRoVI/BC2K+w40bn6lQKzxXiwSbUvVIDHwJ7m6HWTvzfw==
+"@internet-of-people/coeus-proto@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/coeus-proto/-/coeus-proto-5.0.4.tgz#db32ec94cafb544b22f404c0e0480557fe15f89f"
+  integrity sha512-o7yJXV2J34ew9IEf24sMCUa8ez5GnOs/FmF6ZVMdzW9MI49him1AKMO1yOQy7/iRyVksDRYAT63+RYNgD/yNsg==
   dependencies:
     "@arkecosystem/crypto" "^2.7.24"
-    "@internet-of-people/sdk-wasm" "0.0.14"
+    "@internet-of-people/sdk-wasm" "0.0.15"
     bytebuffer "5.0.1"
 
-"@internet-of-people/did-manager@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fdid-manager/-/did-manager-5.0.2.tgz#9e3644a5bf04d2f6d2de574169bcd093c11862a8"
-  integrity sha512-jQOEhakvN7hmF58ZjeZW22aiXnni+IQYGp8QY/ATlzvVorRWst7mLDl9efIypfktSmgNJHXUhNOi/g/4LT3t+g==
+"@internet-of-people/did-manager@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/did-manager/-/did-manager-5.0.4.tgz#f691badf4f9013bf6a4868ac3ff558034e570732"
+  integrity sha512-AiFtxLVpg5yfVERkd2yK99fvxQRD2syfm0Zrg7m6tXxAZDNydJSbYazIT2XQSpc6vIMvsx/Pm81CVXQ6InOojw==
   dependencies:
     "@arkecosystem/core-container" "^2.7.24"
     "@arkecosystem/core-interfaces" "^2.7.24"
@@ -2438,69 +2438,69 @@
     "@arkecosystem/crypto" "^2.7.24"
     "@hapi/boom" "^8.0.0"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/hydra-plugin-core" "5.0.2"
-    "@internet-of-people/node-wasm" "0.0.14"
-    "@internet-of-people/sdk" "5.0.2"
+    "@internet-of-people/hydra-plugin-core" "5.0.4"
+    "@internet-of-people/node-wasm" "0.0.15"
+    "@internet-of-people/sdk" "5.0.4"
     awilix "^4.2.2"
     lodash.clonedeep "4.5.0"
     optional-js "2.1.1"
 
-"@internet-of-people/hydra-plugin-core@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fhydra-plugin-core/-/hydra-plugin-core-5.0.2.tgz#5e5be66cdc63dc430e027725110f16bb7692ed30"
-  integrity sha512-dkmR1KFEm9P02Xu6AEcJc90KgTtUZ1Pmz9xvsjwSYrV3kJKQu6JybN2y54VXseEjn+efpWrCjSlUAAhNYSuaNw==
+"@internet-of-people/hydra-plugin-core@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin-core/-/hydra-plugin-core-5.0.4.tgz#5a8b0e29a0d71647705fd70468532de970cd8844"
+  integrity sha512-iZ59UeDEWYG9h1vEVj8gbwpCoCW2ujuaLsJcAKS5daxqTsKoaatEHxjCqgAZFLmDa9N3RBxEce/PQ8itdI2s/Q==
   dependencies:
     "@arkecosystem/core-interfaces" "^2.7.24"
     "@arkecosystem/core-transactions" "^2.7.24"
     "@arkecosystem/crypto" "^2.7.24"
 
-"@internet-of-people/hydra-plugin@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fhydra-plugin/-/hydra-plugin-5.0.2.tgz#75db2610bd94657d0c17497b8cec4a6e74c4551b"
-  integrity sha512-hynsTNeJTLMdN6gWuqFc1ArTuAggRjqlWUNPLNTa/HfNpWPDwV9fkq7Cg6nc2YyhEg/eZ6nFauGOmAriahpnBQ==
+"@internet-of-people/hydra-plugin@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/hydra-plugin/-/hydra-plugin-5.0.4.tgz#e1ff98b0c431af7c49fa10d4f364a7523d531b64"
+  integrity sha512-wzxdnDfm5s1XNXBH0nIKGjSp/Le4azBUEwQDLAL6dUWGTqRW0S/76b3ARISTtBVfr6Mdtj9gCb1LjoI1eSf8EA==
   dependencies:
     "@arkecosystem/core-event-emitter" "^2.7.24"
     "@arkecosystem/core-interfaces" "^2.7.24"
     "@arkecosystem/core-transactions" "^2.7.24"
     "@arkecosystem/crypto" "^2.7.24"
     "@hapi/hapi" "^18.3.1"
-    "@internet-of-people/coeus-node" "5.0.2"
-    "@internet-of-people/did-manager" "5.0.2"
-    "@internet-of-people/hydra-plugin-core" "5.0.2"
-    "@internet-of-people/sdk" "5.0.2"
+    "@internet-of-people/coeus-node" "5.0.4"
+    "@internet-of-people/did-manager" "5.0.4"
+    "@internet-of-people/hydra-plugin-core" "5.0.4"
+    "@internet-of-people/sdk" "5.0.4"
     awilix "^4.2.2"
     optional-js "2.1.1"
     p-queue "6.2.1"
 
-"@internet-of-people/morpheus-crypto@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fmorpheus-crypto/-/morpheus-crypto-5.0.2.tgz#4ec2fabd8cd6ed2cc5adf68df8f6c044d8d00203"
-  integrity sha512-+UME44OW3Ik2znZp7LvQYQ7Tt8P6bGkdQpHLtMJtf+SX3ZRUjQhZvPcdTtsywuQb14BzvHAnCyx3Zdt653JzIw==
+"@internet-of-people/morpheus-crypto@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/morpheus-crypto/-/morpheus-crypto-5.0.4.tgz#56756a8e14679db0dafc47156ca2e29c1d0603d6"
+  integrity sha512-sZxrCtX9EtqXcl6kK9RPygTcIkKcS2gh1FarvM4EEpfksnd8gmsoyV6aSKJD/PoYlmVCfvtDoEUWoHOrf8Bw8g==
   dependencies:
     "@arkecosystem/crypto" "^2.7.24"
-    "@internet-of-people/sdk-wasm" "0.0.14"
+    "@internet-of-people/sdk-wasm" "0.0.15"
     lodash.clonedeep "4.5.0"
     multibase "0.6.0"
     tslib "2.0.1"
 
-"@internet-of-people/node-wasm@0.0.14":
-  version "0.0.14"
-  resolved "https://npm.iop.technology/@internet-of-people%2fnode-wasm/-/node-wasm-0.0.14.tgz#781846a574dde17cc72131261c4112b50ed0d05a"
-  integrity sha512-fEUyKSEYZSU+Fh/IGz47mMuyHg97Oo5zMBZPGtaHjsARt515jXSEk2/YfEORMiQE8fGGGtlnaOQBSOpSHf2UTA==
+"@internet-of-people/node-wasm@0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/node-wasm/-/node-wasm-0.0.15.tgz#4f1eefd7927fbed1d391c7ceb0fc308d9ec153d8"
+  integrity sha512-CT+StaIjgCamnR+02aQtIimWlNd19VirnqZHN3FWbbc/6p3C4Nrt/vw5fGNAQ87ovuwwycbC0awwyLTrterZVg==
 
-"@internet-of-people/sdk-wasm@0.0.14":
-  version "0.0.14"
-  resolved "https://npm.iop.technology/@internet-of-people%2fsdk-wasm/-/sdk-wasm-0.0.14.tgz#b7baaf0bbbf4554b8d1dca941202c9e5af0d6297"
-  integrity sha512-X16F8Rmloh72PHRVIR80YKwRc9Qd/Ss4+9aD/hhithCj7/ahfX+ceEEkThRcuTtsWIPzLwAZnEna5Irsg7T14g==
+"@internet-of-people/sdk-wasm@0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/sdk-wasm/-/sdk-wasm-0.0.15.tgz#ba51f517f8d1779048bb3e5c31eaf1ee35c2c077"
+  integrity sha512-AZ4RKOK35Tiwxe8LiUXX11/TAS7LHbbhKQuoVBVV+u4pboG5xzLjjrOo1ASkGYmY57/4fQpRSOMZDmDjiqAgfQ==
 
-"@internet-of-people/sdk@5.0.2":
-  version "5.0.2"
-  resolved "https://npm.iop.technology/@internet-of-people%2fsdk/-/sdk-5.0.2.tgz#142501e4e42df552d257681098d084296f8d0cbd"
-  integrity sha512-kbjKD9uRP//8hioHnd2GIgFHF6s2iUuxnxPaTj3tgX2EFrnWrYnAsCpErCob+CFvAkMnpPATDEV2rHLbk1xCOw==
+"@internet-of-people/sdk@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@internet-of-people/sdk/-/sdk-5.0.4.tgz#c11a4ea2d0c2b06a9ba78511d2c1af7a350c2a29"
+  integrity sha512-huyq4MKX6Eo9N0yS5Rv0G//x8SOkVZdMNCkQhc9p1LEYozYVljktB05BBJBJ/Mw4cWYfR2TtENOId+sr+kWDdg==
   dependencies:
     "@arkecosystem/crypto" "^2.7.24"
-    "@internet-of-people/morpheus-crypto" "5.0.2"
-    "@internet-of-people/sdk-wasm" "0.0.14"
+    "@internet-of-people/morpheus-crypto" "5.0.4"
+    "@internet-of-people/sdk-wasm" "0.0.15"
     axios "0.19.0"
     bytebuffer "5.0.1"
     optional-js "2.1.1"
