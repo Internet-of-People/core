@@ -133,6 +133,9 @@ export class Worker extends SCWorker {
                 return this.setErrorForIpAndDestroy(req.socket);
             } else {
                 try {
+                    if (message.length > 1000000) { // if a message is really big, then it might be a spam, we must deny it
+                        return this.setErrorForIpAndDestroy(req.socket);
+                    }
                     const parsed = JSON.parse(message);
                     if (validate(message) !== undefined) {
                         return this.setErrorForIpAndDestroy(req.socket);
