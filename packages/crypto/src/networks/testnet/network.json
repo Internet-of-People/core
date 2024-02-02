@@ -13,6 +13,6 @@
     "client": {
         "token": "THYD",
         "symbol": "TĦ",
-        "explorer": "https://test.explorer.hydraledger.io"
+        "explorer": "https://test.explorer.hydraledger.tech"
     }
 }

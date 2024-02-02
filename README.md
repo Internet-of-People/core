@@ -32,6 +32,10 @@ Changes to naming schemes, documentation and other auxiliary files are thus kept
 
 Below we describe what were the changes we made release by release compared to the original Ark code.
 
+### 2.7.24+p9
+
+-   Use new `hydraledger.tech` domain.
+
 ### 2.7.24+p8
 
 -   Remove transaction asset's size limit
